@@ -1,0 +1,36 @@
+
+[project]
+
+name = "pyclassify"
+
+version = "0.0.1"
+
+description = "Tiziano's project"
+
+readme = "README.md"
+
+requires-python = ">=3.9"
+
+license = { file = "LICENSE" }
+
+authors = [{ name = "Tiziano Causin", email = "causintiziano@gmail.com" }]
+
+dynamic = ["dependencies"]
+
+
+[tool.setuptools.packages.find]
+
+where = ["src"]
+
+exclude = ["scripts", "tests", "shell", "experiments"]
+
+
+[tool.setuptools.dynamic]
+
+dependencies = { file = ["requirements.txt"] }
+
+
+[project.optional-dependencies]
+
+test = ["pytest"]
+
